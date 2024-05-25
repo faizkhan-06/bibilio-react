@@ -3,9 +3,9 @@ import slideOne from "../assets/images/Adventures_of_Sherlock_Holmes-transformed
 import slideTwo from "../assets/images/Animal_Farm-transformed.jpeg";
 import slideThree from "../assets/images/NineteenEightyFour.jpg";
 import "../styles/slider.css";
+
 // import Swiper core and required modules
 import { Pagination, Autoplay } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -17,7 +17,7 @@ import "swiper/css/scrollbar";
 function Slider() {
   return (
     <>
-      <section className="hero-section">
+      <section id="hero-section" className="hero-section">
         <Swiper
           // install Swiper modules
           modules={[Pagination, Autoplay]}
@@ -27,14 +27,24 @@ function Slider() {
           autoplay={{ delay: 2000, disableOnInteraction: false }}
         >
           <SwiperSlide>
-            <div className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5">
-              <div className="h-full flex flex-col justify-end pl-20">
-                <div className="flex flex-col title mb-5 text-xl font-bold">
+            <div
+              id="slide-one"
+              className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5"
+            >
+              <div
+                id="slide-one-text"
+                className="h-full flex flex-col justify-end pl-20"
+              >
+                <div
+                  id="slide-one-title"
+                  className="flex flex-col title mb-5 text-xl font-bold"
+                >
                   <span className="mb-2 b1">The Adventures of</span>
-                  <span> Sherlock Holmes</span>
+                  <span>Sherlock Holmes</span>
                 </div>
                 <div>
                   <p
+                    id="slide-one-description"
                     className="text-sm text-gray-600"
                     style={{ width: "28rem" }}
                   >
@@ -44,7 +54,10 @@ function Slider() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div
+                id="slide-one-image"
+                className="flex justify-center items-center"
+              >
                 <div className="img-div">
                   <img src={slideOne} alt="AdventuresofSherlockHolmes" />
                 </div>
@@ -52,13 +65,23 @@ function Slider() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5">
-              <div className="h-full flex flex-col justify-end pl-20">
-                <div className="flex flex-col title mb-5 text-xl font-bold">
+            <div
+              id="slide-two"
+              className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5"
+            >
+              <div
+                id="slide-two-text"
+                className="h-full flex flex-col justify-end pl-20"
+              >
+                <div
+                  id="slide-two-title"
+                  className="flex flex-col title mb-5 text-xl font-bold"
+                >
                   <span className="b2">Animal Farm</span>
                 </div>
                 <div>
                   <p
+                    id="slide-two-description"
                     className="text-sm text-gray-600"
                     style={{ width: "28rem" }}
                   >
@@ -69,21 +92,34 @@ function Slider() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div
+                id="slide-two-image"
+                className="flex justify-center items-center"
+              >
                 <div className="img-div">
-                  <img src={slideTwo} alt="animalfarm" />
+                  <img src={slideTwo} alt="Animal Farm" />
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5">
-              <div className="h-full flex flex-col justify-end pl-20">
-                <div className="flex flex-col title mb-5 text-xl font-bold">
+            <div
+              id="slide-three"
+              className="bg-gray-950 rounded-3xl grid grid-cols-2 items-center justify-center py-10 mx-20 my-5"
+            >
+              <div
+                id="slide-three-text"
+                className="h-full flex flex-col justify-end pl-20"
+              >
+                <div
+                  id="slide-three-title"
+                  className="flex flex-col title mb-5 text-xl font-bold"
+                >
                   <span className="b1">1984</span>
                 </div>
                 <div>
                   <p
+                    id="slide-three-description"
                     className="text-sm text-gray-600"
                     style={{ width: "28rem" }}
                   >
@@ -95,9 +131,12 @@ function Slider() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div
+                id="slide-three-image"
+                className="flex justify-center items-center"
+              >
                 <div className="img-div">
-                  <img src={slideThree} />
+                  <img src={slideThree} alt="1984" />
                 </div>
               </div>
             </div>
